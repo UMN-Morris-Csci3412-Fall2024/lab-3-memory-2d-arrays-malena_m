@@ -68,8 +68,8 @@ TEST(Mergesort, HandleAllZeroes) {
 }
 
 TEST(Mergesort, HandleMixedRepeats) {
-  int a[] = { 9, 8, 8, 8, 9, 9, 8 };
-  int expected[] = { 8, 8, 8, 8, 9, 9, 9 };
+  int a[] = { 17, 8, 8, 8, 17, 17, 8 };
+  int expected[] = { 8, 8, 8, 8, 17, 17, 17 };
   mergesort(7, a);
   arrays_match(7, a, expected);
 }
