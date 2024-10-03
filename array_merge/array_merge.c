@@ -26,8 +26,8 @@ int* array_merge(int num_arrays, int* sizes, int** values) {
         }
     }
 
-    // Sort the merged array
-    qsort(merged_array, total_elements, sizeof(int), compare_ints);
+    // Sort the merged array using mergesort
+    mergesort(total_elements, merged_array);
 
     // Remove duplicates and count unique elements
     int unique_count = 0;
