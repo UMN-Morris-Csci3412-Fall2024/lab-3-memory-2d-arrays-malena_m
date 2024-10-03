@@ -94,6 +94,10 @@ TEST(ArrayMerge, Handle_different_sizes) {
   result = array_merge(num_arrays, sizes, a);
   arrays_match(11, result, expected);
   free(result); // Free the memory allocated by array_merge
+
+    for (i = 0; i < num_arrays; ++i) {
+    free(a[i]); // Free memory allocated for each array
+  }
 }
 
 TEST(ArrayMerge, Handle_different_sizes_reversed) {
@@ -115,6 +119,10 @@ TEST(ArrayMerge, Handle_different_sizes_reversed) {
   result = array_merge(num_arrays, sizes, a);
   arrays_match(11, result, expected);\
   free(result); // Free the memory allocated by array_merge
+
+  for (i = 0; i < num_arrays; ++i) {
+    free(a[i]); // Free memory allocated for each array
+  }
 }
 
 int main(int argc, char* argv[]) {
