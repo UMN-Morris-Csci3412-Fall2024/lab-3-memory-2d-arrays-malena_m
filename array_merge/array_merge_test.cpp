@@ -93,7 +93,7 @@ TEST(ArrayMerge, Handle_different_sizes) {
 
   result = array_merge(num_arrays, sizes, a);
   arrays_match(11, result, expected);
-
+  free(result); // Free the memory allocated by array_merge
 }
 
 TEST(ArrayMerge, Handle_different_sizes_reversed) {
